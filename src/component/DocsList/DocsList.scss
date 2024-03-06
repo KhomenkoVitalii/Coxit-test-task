@@ -5,4 +5,37 @@
     flex-direction: column;
 
     margin: $grid_base 0;
+
+
+}
+
+@media (max-width: $breakpoint_mobile) {
+    .document.columns {
+        display: none;
+    }
+}
+
+@media (min-width: $breakpoint_desktop) {
+    .document.columns {
+        padding-bottom: $grid_base * 0.5;
+        margin: $grid_base 0;
+        border-bottom: 1px solid #ccc;
+
+        color: #ccc;
+    }
+
+    .document {
+        // &_column_name {}
+        // &_column {}
+
+        &_column_status,
+        &_column_date,
+        &_column_size {
+            text-align: center;
+        }
+
+        &_column_comment {
+            text-align: right;
+        }
+    }
 }
