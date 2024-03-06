@@ -1,0 +1,75 @@
+@import '../../assets/styles/_variables';
+@import '../../assets/styles/_mixins';
+
+.search_container {
+    position: relative;
+
+    &_form {
+        display: flex;
+        border: solid #858585 1px;
+        border-radius: 10px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    &_textbox {
+        padding: 0 calc($grid_base / 2);
+        flex-grow: 1;
+    }
+
+    &_button {
+        width: $grid_base * 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+
+    &_suggestions {
+        overflow: auto;
+        background-color: #fff;
+        color: black;
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        top: calc(100% + $grid_base / 2);
+        z-index: 10;
+
+        &.hidden {
+            visibility: hidden;
+        }
+
+    }
+
+    &_suggestion {
+        cursor: pointer;
+        padding: calc($grid_base / 4) calc($grid_base / 2);
+
+        &:hover {
+            background-color: #f3f3f3;
+        }
+    }
+}
+
+@media (min-width: $breakpoint_desktop) {
+    .search_container {
+        width: 15rem;
+
+        &_suggestions {
+            max-height: 40vh;
+        }
+    }
+}
+
+@media (max-width: $breakpoint_mobile) {
+    .search_container {
+        flex-grow: 1;
+
+        &_suggestions {
+            max-height: 50vh;
+        }
+    }
+}

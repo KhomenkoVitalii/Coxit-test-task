@@ -1,0 +1,71 @@
+@import '../../assets/styles/_variables';
+@import '../../assets/styles/_mixins';
+
+.main {
+    @include fluid_container;
+
+    padding-top: $grid_base;
+    padding-bottom: $grid_base * 2;
+
+    &_head {
+        display: flex;
+        margin-bottom: $grid_base;
+    }
+
+    &_general {
+        position: relative;
+        font-size: $grid_base * 2;
+
+        &_count {
+            font-size: 12px;
+
+            position: absolute;
+            top: 0;
+            left: calc(100% + $grid_base * 0.5);
+        }
+    }
+}
+
+@media (min-width: $breakpoint_desktop) {
+    .main {
+        &_head {
+            justify-content: space-between;
+        }
+
+
+        &_general {
+            position: relative;
+            font-size: $grid_base * 2;
+
+            &_count {
+                font-size: 12px;
+
+                position: absolute;
+                top: 0;
+                left: calc(100% + $grid_base * 0.5);
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint_mobile) {
+    .main {
+        &_head {
+            flex-direction: column;
+            row-gap: calc($grid_base / 2);
+        }
+
+        &_general {
+            position: relative;
+            font-size: $grid_base * 1.5;
+
+            &_count {
+                font-size: 12px;
+
+                position: absolute;
+                top: 0;
+                left: calc($grid_base * 5);
+            }
+        }
+    }
+}

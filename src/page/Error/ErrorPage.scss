@@ -1,0 +1,24 @@
+@import '../../assets/styles/_variables';
+
+.error {   
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary_color;
+    border-radius: 10px;
+    padding: $grid_base;
+}
+
+@media (min-width: $breakpoint_desktop) {
+    .error {
+        margin: 10% 20%;        
+    }
+}
+
+@media (max-width: $breakpoint_mobile) {
+    .error {
+        margin: 20% $grid_base 0;
+    }
+}

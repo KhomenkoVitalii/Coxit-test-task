@@ -1,0 +1,102 @@
+@import '../../assets/styles/_variables';
+@import '../../assets/styles/_mixins';
+
+.document {
+    font-size: 16px;
+
+
+    &_name_wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: $grid_base;
+    }
+
+    &_icon {
+        color: $highlight_color;
+    }
+
+    &_name {
+        text-align: center;
+        text-wrap: nowrap;
+    }
+
+    &_author {
+        text-align: left;
+        text-wrap: nowrap;
+    }
+
+    &_status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+        background-color: $pending_status_color;
+        padding: calc($grid_base * 0.5) $grid_base;
+        box-sizing: border-box;
+
+        &.success {
+            color: $text_secondary_color;
+            background-color: $success_status_color;
+        }
+    }
+
+    &_date {
+        text-align: center;
+        text-wrap: nowrap;
+    }
+
+    &_size {
+        text-align: center;
+        text-wrap: nowrap;
+    }
+
+    &_comments {
+        text-align: right;
+    }
+}
+
+@media (max-width: $breakpoint_mobile) {
+    .document {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: $grid_base;
+
+
+        padding-bottom: $grid_base;
+        border-bottom: 1px solid #ccc;
+
+
+        &_name_wrapper {
+            width: 40%;
+        }
+
+        &_author {
+            width: 40%;
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: $breakpoint_desktop) {
+    .document {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr;
+        gap: $grid_base;
+
+        justify-content: space-between;
+        align-items: center;
+
+        &_name_wrapper {
+            width: 40%;
+            text-align: center;
+        }
+
+        &_author {
+            width: 40%;
+            text-align: left;
+        }
+    }
+}

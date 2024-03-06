@@ -1,0 +1,23 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    font-weight: inherit;
+}
+
+button,
+input {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}

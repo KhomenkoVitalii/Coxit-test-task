@@ -1,0 +1,15 @@
+@mixin fluid_container {
+    @media (min-width: $breakpoint_desktop) {
+        padding-left: $grid_base * 2;
+        padding-right: $grid_base * 2;
+        max-width: $container_width_large;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: $breakpoint_mobile) {
+        padding-left: $grid_base;
+        padding-right: $grid_base;
+    }
+}

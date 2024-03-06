@@ -1,0 +1,8 @@
+@import '../../assets/styles/_variables';
+
+.documents {
+    display: flex;
+    flex-direction: column;
+
+    margin: $grid_base 0;
+}

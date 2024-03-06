@@ -1,0 +1,50 @@
+@import '../../assets/styles/_variables';
+
+.toolbar {
+    display: flex;
+
+    &_add_btn {
+        display: flex;
+        align-items: center;
+        padding: calc($grid_base / 2);
+        color: $primary_color;
+        font-family: $text_font;
+        border-radius: 10px;
+        background-color: $highlight_color;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: $breakpoint_desktop) {
+    .toolbar {
+        column-gap: $grid_base;
+
+        &_add_btn {
+            column-gap: calc($grid_base / 2);
+        }
+    }
+}
+
+@media (max-width: $breakpoint_mobile) {
+    .toolbar {
+        column-gap: calc($grid_base / 2);
+
+        &_add_btn {
+            column-gap: calc($grid_base / 4);
+
+            .MuiSvgIcon-root {
+                width: .75em;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint_mobile_xs) {
+    .toolbar {
+        &_add_btn {
+            &_label {
+                display: none;
+            }
+        }
+    }
+}
