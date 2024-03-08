@@ -1,4 +1,9 @@
-## Part 1: Coding with React.js
+## Content
+- [Part 1](#part-1-coding-with-react)
+- [Part 2](#part-2-file-upload-to-s3-description)
+- [Run project](#to-start)
+
+## Part 1 Coding with React
 
 ### **Objective**
 
@@ -21,6 +26,16 @@ The endpoint is a mock server created using Prism. It will always return example
 5. Pay attention to detail, including spacing, fonts, colors, and overall layout fidelity.
 6. Optionally, you can utilize any additional libraries or frameworks if you believe they will aid in achieving the desired result.
 
-## Part 2: File Upload to S3 Description
+## Part 2 File Upload to S3 Description
 
 Please, switch to `part_2` branch and inside the `part2` directory you will find my solution.
+
+## To start
+1. Install dependencies using
+```bash
+npm run install
+```
+2. Run app in dev mode
+```bash
+npm run dev
+```
